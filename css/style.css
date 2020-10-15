@@ -1,5 +1,6 @@
 body{
     display: grid;
+    width: auto;
 }
 *{
     padding: 0;
@@ -73,7 +74,7 @@ body{
     width: 100%;
     font-size: 12px;
     text-align: center;
-    height: 200px;
+    height: 100%;
     color: white;
     background: #004789;
     box-shadow: 1px 6px 16px -1px rgba(0,0,0,0.81);
@@ -152,7 +153,7 @@ body{
 }
 .grid-2{
     flex: 1;
-    width: 50%;
+    width: 100%;
     border: thin solid black;
 }
 .grid-3{
@@ -226,11 +227,24 @@ body{
 .container-information .main-us > a{
     color: black;
 }
+.container-information .main-us > a:nth-of-type(2){
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #004789;
+    margin: auto;
+    color: white;
+    border: thin solid black;
+}
+.container-information .main-us > a:nth-of-type(2):hover{
+    color: yellow;
+    transform: scale(1.2);
+}
 .container-information .main-us > a:hover{
     color: orange;
 }
+
 input[type=text] {
-    width: 130px;
+    width: 50%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
