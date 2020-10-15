@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/main.js">
+    <title>О нас</title>
+    <script type="text/javascript">
+        var lastResFind=""; // последний удачный результат
+        var copy_page=""; // копия страницы в ихсодном виде
+        function TrimStr(s) {
+             s = s.replace( /^\s+/g, '');
+          return s.replace( /\s+$/g, '');
+        }
+        function FindOnPage(inputId) {//ищет текст на странице, в параметр передается ID поля для ввода
+          var obj = window.document.getElementById(inputId);
+          var textToFind;
+         
+          if (obj) {
+            textToFind = TrimStr(obj.value);//обрезаем пробелы
+          } else {
+            alert("Введенная фраза не найдена");
+            return;
+          }
+          if (textToFind == "") {
+            alert("Вы ничего не ввели");
+            return;
+          }
+         
+          if(copy_page.length>0)
+                document.body.innerHTML=copy_page;
+          else copy_page=document.body.innerHTML;
+        
+         
+          document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");//стираем предыдущие якори для скрола
+          document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<a name="+textToFind+" style='background:lightblue'>"+textToFind+"</a>"); //Заменяем найденный текст ссылками с якорем;
+          lastResFind=textToFind; // сохраняем фразу для поиска, чтобы в дальнейшем по ней стереть все ссылки
+          window.location = '#'+textToFind;//перемещаем скрол к последнему найденному совпадению
+         }
+        </script>
+</head>
+<body>
+    <!-- Head area end -->
+        <div class="container-1">
+            <div class="box-1">
+                <p><span><i class="fas fa-phone-square-alt"></i></span>
+                <span>+7 (7172) 21 04 54</span>
+                </p>
+                <p><span><i class="fas fa-envelope"></i></span>
+                <span>proin.kz@mail.ru</span>
+                </p>
+            </div>
+            <div class="box-2">
+                <a href="http://www.edu-tradeunion.kz/" target="_blank"><img src="../img/Logo_Header.png" alt="Logo"></a>
+            </div>
+            <div class="box-3">
+                <!-- <p><i class="fas fa-1x fa-search"></i></p>
+                <a href="https://www.facebook.com/profsoyuzrabotnikovobrazovaniya/" target="_blank"><p><i class="fab fa-1x fa-facebook-f"></i></p></a>
+                <a href="https://instagram.com/bilim_kasipodagy?igshid=z1sjjyuc4pxy" target="_blank"><p><i class="fab fa-1x fa-instagram"></i></p></a>
+                <a href="https://t.me/ptofsoyuzobrazovaniya" target="_blank"><p><i class="fab fa-1x fa-telegram-plane"></i></p></a> -->
+            </div>
+        </div>
+    <!-- Themes area end -->
+    <div class="back">
+        <p><a href="../index.html">Главная</a><i class="fas fa-chevron-right"></i> О нас</p>
+    </div>
+<div class="search-text">
+    <input type="text" id="text-to-find" value="">
+    <input type="button" onclick="javascript: FindOnPage('text-to-find'); return false;" value="Искать"/>
+</div>
+    <div class="container-information">
+            <div class="main-us">
+                <a href="./contact-info-1.html"><li>ОБЩЕСТВЕННОЕ ОБЪЕДИНЕНИЕ «КАЗАХСТАНСКИЙ ОТРАСЛЕВОЙ ПРОФЕССИОНАЛЬНЫЙ СОЮЗ РАБОТНИКОВ ОБРАЗОВАНИЯ И НАУКИ»</li></a>
+                <p>г. Нур-Султан</p>
+                <a href="./contact-info-1.html"><p>Перейти</p></a>
+            </div>
+            <p>Областные и территориальные организации Казахстанского отраслевого профессионального союза работников образования и науки</p>
+                <div class="main-us">
+                    <a href="./contact-info-2.html"><li>ОО «г. Нур-Султан и Акмолинской области организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Кокшетау</li>
+                    <a href="./contact-info-2.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-3.html"><li>ОО «Профессиональный союз работников образования «Әділет» города Нур-Султан»</li></a>
+                    <p>г. Нур-Султан</p>
+                    <a href="./contact-info-3.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-4.html"><li>Общественное объединение «Алматинский городской профессиональный союз «Ұстаз»</li></a>
+                    <p>г. Алматы</p>
+                    <a href="./contact-info-4.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-5.html"><li>ОО «Профсоюзная организация  работников образования и науки Алматинской области»</li></a>
+                    <p>г. Талдыкорган</p>
+                    <a href="./contact-info-5.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-6.html"><li>ОО «Актюбинская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Актобе</p>
+                    <a href="./contact-info-6.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-7.html"><li>ОО «Атырауская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Атырау</p>
+                    <a href="./contact-info-7.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-8.html"><li>ОО «Локальный профсоюз работников образования и науки Восточно-Казахстанской  области»</li></a>
+                    <p>г. Усть-Каменогорск</p>
+                    <a href="./contact-info-8.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-9.html"><li>ОО «Локальный профессиональный союз работников образования и науки Жамбылской области»</li></a>
+                    <p>г. Тараз</p>
+                    <a href="./contact-info-9.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-10.html"><li>ОО «Жезказганская территориальная профсоюзная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Жезказган</p>
+                    <a href="./contact-info-10.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-11.html"><li>ОО «Западно-Казахстанская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»
+                    </li></a>
+                    <p>г. Уральск</p>
+                    <a href="./contact-info-11.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-12.html"><li>ОО «Карагандинская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Караганда</p>
+                    <a href="./contact-info-12.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-13.html"><li>ОО «Костанайская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Костанай</p>
+                    <a href="./contact-info-13.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-14.html"><li>ОО «Кызылординская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Кызылорда</p>
+                    <a href="./contact-info-14.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-15.html"><li>ОО «Мангистауская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Актау</p>
+                    <a href="./contact-info-15.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-16.html"><li>ОО «Павлодарская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Павлодар</p>
+                    <a href="./contact-info-16.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-17.html"><li>ОО «Северо-Казахстанская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Петропавловск</p>
+                    <a href="./contact-info-17.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-18.html"><li>ОО «Семейская территориальная профсоюзная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Семей</p>
+                    <a href="./contact-info-18.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-19.html"><li>ОО «Туркестанская областная организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Шымкент</p>
+                    <a href="./contact-info-19.html"><p>Перейти</p></a>
+                </div>
+                <p>Филиальные и городские организации Казахстанского отраслевого профессионального союза работников образования и науки</p>
+                <div class="main-us">
+                    <a href="./contact-info-20.html"><li>Филиал «Первичная профсоюзная организация работников Евразийского национального университета имени Л. Н. Гумилева» ОО «Казахстанский отраслевой профсоюз работников образования и науки»</li></a>
+                    <p>г. Нур-Султан</p>
+                    <a href="./contact-info-20.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-21.html"><li>Филиал «Первичная профсоюзная организация студентов Евразийского национального университета имени Л. Н. Гумилева» ОО «Казахстанский отраслевой профсоюз работников образования и науки» </li></a>
+                    <p>г. Нур-Султан</p>
+                    <a href="./contact-info-21.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-22.html"><li>Общественное объединение «Алматинский городской профессиональный союз»</li></a>
+                    <p>г. Алматы</p>
+                    <a href="./contact-info-22.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-23.html"><li>Общественное объединение «Шымкентская городская организация Казахстанского отраслевого профессионального союза работников образования и науки»</li></a>
+                    <p>г. Шымкент</p>
+                    <a href="./contact-info-23.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-24.html"><li>Филиал «Профсоюзная организация работников Казахского национального  исследовательского технического университета им. К. Сатпаева» Казахстанского отраслевого профсоюза работников образования и науки</li></a>
+                    <p>г. Алматы</p>
+                    <a href="./contact-info-24.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-25.html"><li>ОО «Локальный профессиональный союз сотрудников и обучающихся «Сәтбаев Университеті»</li></a>
+                    <p>г. Алматы</p>
+                    <a href="./contact-info-25.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-26.html"><li>Филиал «Профсоюзная организация студентов Казахского национального исследовательского  технического университета им. К. Сатпаева»Казахстанского отраслевого профсоюзаработников образования и науки</li></a>
+                    <p>г. Алматы</p>
+                    <a href="./contact-info-26.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-27.html"><li>ОО «Локальный профессиональный союз Казахского национального педагогического университета им. Абая»Казахстанского отраслевого профсоюзаработников образования и науки</li></a>
+                    <p>г. Алматы</p>
+                    <a href="./contact-info-27.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-28.html"><li>Первичная  профсоюзная  организация  НАО им. И.Алтынсарина Казахстанского отраслевого профсоюзаработников образования и науки</li></a>
+                    <p>г. Нур-Султан</p>
+                    <a href="./contact-info-28.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-29.html"><li>ОО «Локальный профессиональный союз работников Казахского национального женского педагогического университета»Казахстанского отраслевого профсоюзаработников образования и науки</li></a>
+                    <p>г. Алматы</p>
+                    <a href="./contact-info-29.html"><p>Перейти</p></a>
+                </div>
+                <div class="main-us">
+                    <a href="./contact-info-30.html"><li>Первичная  профсоюзная  организация  АО «Казахский университет технологии и бизнеса» Казахстанского отраслевого профсоюзаработников образования и науки</li></a>
+                    <p>г. Нур-Султан</p>
+                    <a href="./contact-info-30.html"><p>Перейти</p></a>
+                </div>
+            </div>
+</body>
+</html>
+
+<!-- <div class="box-au">
+    <h2>Мукашева Айгуль Максатовна</h2>
+</div>
+<div class="box-au">
+    <p>Должность: Председатель</p>
+</div>
+<div class="box-au">
+    <p>Дата рождения: 14.06.1964</p>
+</div>
+<div class="box-au">
+    <p>Телефон: 8 (7172) 210454</p>
+</div>
+</div>
+<div class="container-information">
+<div class="box-au">
+    <h2>Беженаров Виктор Федорович</h2>
+</div>
+<div class="box-au">
+    <p>Должность: Заместитель Председателя </p>
+</div>
+<div class="box-au">
+    <p>Дата рождения: 28.03.1955</p>
+</div>
+<div class="box-au">
+    <p>Телефон: 8(7172) 210320</p>
+</div>
+</div>
+<div class="container-information">
+<div class="box-au">
+    <h2>Абиева Алия Адилхановна</h2>
+</div>
+<div class="box-au">
+    <p>Должность: Заместитель Председателя </p>
+</div>
+<div class="box-au">
+    <p>Дата рождения: 10.04.1981</p>
+</div>
+<div class="box-au">
+    <p>Телефон: 8(7172) 217133</p>
+</div> -->
